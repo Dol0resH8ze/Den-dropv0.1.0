@@ -22,6 +22,12 @@ classifiers = [
     "Topic :: Communications :: File Sharing",
 ]
 
+[project.urls]
+Homepage = "https://github.com/Dol0resH8ze/den-drop"
+Repository = "https://github.com/Dol0resH8ze/den-drop"
+Issues = "https://github.com/Dol0resH8ze/den-drop/issues"
+Security = "https://github.com/Dol0resH8ze/den-drop/blob/main/SECURITY.md"
+
 [project.optional-dependencies]
 dev = ["pytest==8.4.2", "pytest-asyncio==1.2.0", "build>=1.2", "twine>=6"]
 
@@ -34,4 +40,3 @@ include = ["den_drop*"]
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 testpaths = ["tests"]
-

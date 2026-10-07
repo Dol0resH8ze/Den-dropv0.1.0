@@ -33,6 +33,10 @@ test operations. No user files were transmitted to an external recipient.
 
 ## Not yet verified
 
+After the initial build, the user reported successful use following the
+cross-device Tor instructions. This is a manual user report; the checks below
+describe the limits of the automated/local validation, not that report.
+
 - A real Tor binary starting, publishing its onion service, and transferring a
   file over the public Tor network. No Tor executable was found on this machine.
 - A transfer between two physical devices or over real Wi-Fi/LAN.

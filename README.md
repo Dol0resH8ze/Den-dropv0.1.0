@@ -36,10 +36,21 @@ The sender is the file host. There is no separate relay command or third-party
 file storage. In Tor mode, encrypted traffic still travels through the Tor
 network; "self-hosted" does not mean that all network traffic stays on your PC.
 
-## Install from this project
+## Installation
 
-This prototype has **not been published to PyPI**. Install this checkout rather
-than assuming that a package with a similar name belongs to this project.
+Requires Python 3.12 or newer. The package and terminal command are both
+`den-drop`. For the PyPI release:
+
+```text
+python -m pip install den-drop
+den-drop --help
+```
+
+Tor is a separate prerequisite for remote transfers; pip does not install it.
+If the release is not yet available, or you want to develop the app, install
+from this repository using the commands below.
+
+### Install from source
 
 Windows PowerShell, inside the project folder:
 
@@ -213,7 +224,8 @@ Zip a folder yourself if you want to send it as one file.
   Normal shutdown attempts to remove them. A crash, forced kill, power loss, or
   filesystem failure can leave runtime data or partial downloads behind.
 
-See [SECURITY.md](SECURITY.md) and [protocol notes](docs/PROTOCOL.md).
+See [SECURITY.md](https://github.com/Dol0resH8ze/den-drop/blob/main/SECURITY.md)
+and [protocol notes](https://github.com/Dol0resH8ze/den-drop/blob/main/docs/PROTOCOL.md).
 
 ## Development and checks
 
@@ -228,9 +240,9 @@ python -m twine check dist/*
 Use the virtual environment's Python. Tests cover transfer success and failure,
 invites, framing, authenticity, output-file safety, CLI flow, and mocked Tor
 lifecycle plus a local SOCKS server. They are not a security audit. See
-[validation notes](docs/VALIDATION.md) for what was actually run.
+[validation notes](https://github.com/Dol0resH8ze/den-drop/blob/main/docs/VALIDATION.md)
+for what was actually run.
 
 ## License
 
-[MIT](LICENSE).
-
+[MIT](https://github.com/Dol0resH8ze/den-drop/blob/main/LICENSE).

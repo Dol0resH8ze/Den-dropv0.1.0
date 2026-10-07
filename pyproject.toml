@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "den-drop"
+version = "0.1.0"
+description = "Experimental self-hosted encrypted file handoffs for the terminal"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Dol0resH8ze"}]
+dependencies = ["PyNaCl==1.6.2", "python-socks[asyncio]==2.8.1", "prompt-toolkit==3.0.52"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Communications :: File Sharing",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.4.2", "pytest-asyncio==1.2.0", "build>=1.2", "twine>=6"]
+
+[project.scripts]
+den-drop = "den_drop.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["den_drop*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
